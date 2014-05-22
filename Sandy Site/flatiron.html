@@ -1,0 +1,533 @@
+<DOCTYPE! HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="New York City, NYC, design, web development, front-end, sandy liao, flatiron school, fashion institute, animation, flatiron school, alumni">
+    <meta name="description" content="Currently a student at the Flatiron School.">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>.:sandymliao.com:.</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <!--[if lt IE 9]!>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   <header>
+       <ul class="social_media one_edge_shadow">
+          <li> <a href="https://www.linkedin.com/in/sandymliao"> <img src="images/linkedin.png" alt="LinkedIn" /> </a> </li>
+          <li> <a href="https://twitter.com/xxSandillyxx"> <img src="images/twitter.png" alt="Twitter" /> </a> </li>
+          <li> <a href="https://github.com/xxSandiLLyxx"> <img src="images/github.png" alt="Github" /> </a> </li>
+          <li> <a href="https://www.facebook.com/sandy.liao.3762"> <img src="images/facebook.png" alt="Facebook" /> </a> </li>
+      </ul>
+      
+
+      <a href="http://www.sandymliao.com"><img class="logo" src="images/logo.png" alt="Sandymliao.com logo" /></a>
+      <p class="blog_header rounded"><img class="heart"src="images/heart.png" alt="Heart <3" />THE FLATIRON LIFE</p> 
+
+    </header>
+
+    <article>
+      <div class="postings">
+        <section id="572014">
+          <hgroup>
+            <h4>May 7, 2014</h4>
+              <blockquote>“Any fool can write code that a computer can understand. Good programmers write  code that humans can understand.” -- Martin Fowler 
+              </blockquote>
+              
+            <h1>What is a Flowchart?</h1>
+          </hgroup>
+          <p>  
+            We have encounter many flowcharts in our life. Remember, back when you were in junior high school when you wondered if that cute new kid in class liked you? Well, let's flip to page 97 in the Seventeen magazine and take the quiz! <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Did you dress like a slut? YES OR NO... NO... <br />Well, it probably told you they didn't like you and you should change yourself. Let's not make flowcharts that make people want to kill themselves. Let's use it for programming!
+            <figure> 
+              <img src = "images/funny_fc.jpg" alt="Sad Flow Chart" /> 
+              <figcaption>This breaks the "Don't be an ASSHOLE!" Flatiron rule.</figcaption>
+            </figure>
+            A flowchart is a graphic representation of a process organized by geometric shapes. In the instance of programming, you can think of it like the GUI of pseudo code. It shows the steps in boxes or levels that are connected by arrows. Each box is a thought or an action. A flowchart serves as a blueprint for the information we are presenting.
+          </p>
+          <p>
+            <h2>Components of a basic flowchart</h2>
+            There are a couple main geometric shapes that make up the flowchart:
+            <img class="ex_img" src = "images/ex1.png" alt = "Flowchart components" />
+
+          </p>
+          <p>
+            <h2>Example Flowcharts</h2>
+            <h4>If/Else Statement<h4>
+            <figure>
+              <img src="images/if_else.png" alt = "An If/Else Statement Flowchart" />
+            </figure>
+            Code:
+            <div class = "code_block">
+              x = 1 <br />
+              if x < 5 <br />
+                &nbsp;&nbsp;puts "Hi" <br />
+              else <br />
+                &nbsp;&nbsp;puts "Bye" <br />
+              end <br />
+            </div>
+            <h4>While Loop</h4>
+            <figure>
+              <img src="images/while.png" alt = "A While Loop Flowchart" />
+            </figure>
+            Code:
+            <div class = "code_block">
+              x = 1 <br />
+              while x < 5 <br />
+                &nbsp;&nbsp;puts "Hi" <br />
+                x += 1 <br />
+              end <br />
+            </div>
+          </p>
+          <p>
+            <h2>Let's go with the flow and solve something</h2>
+            Pseudo code:
+            <ol>
+              <li>Initialize passes to zero</li>
+              <li>Initialize failures to zero</li>
+              <li>Initialize student to one</li>
+              <li>While student counter is less than or equal to ten
+                <ul>
+                  <li>Input the next exam result
+                    <ul>
+                      <li>If the student passed</li>
+                      <li>Add one to passes</li>
+                    </ul>
+                    <ul>
+                      <li>Else</li>
+                      <li>Add one to failures</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Add one to student counter</li>
+              <li>Print the number of passes</li>
+              <li>Print the number of failures</li>
+              <li>If eight or more students passed</li>
+              <li>Print "raise tuition"</li>
+            </ol>
+            <figure> <img src="images/pseudo.png" alt = "Pseudo code made into a flowchart" />
+              <figcaption> We did it! </figcaption>
+            </figure>
+            Code
+            <div class = "code_block">
+              students = 0<br />
+              passes = 0 <br />
+              fails = 0 <br />
+              <br />
+              while students < 10 <br />
+                &nbsp;&nbsp;puts "Please enter the exam grade."  <br />
+                &nbsp;&nbsp;grade = gets.chomp.to_i <br />
+                <br />
+                &nbsp;&nbsp;if grade >= 65  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;passes +=1 <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;students += 1 <br />
+               &nbsp;&nbsp;else <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;fails +=1 <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;students += 1 <br />
+                &nbsp;&nbsp;end <br />
+              end <br />
+                <br />
+                puts "The number of students that passed: #{passes} and the number of students who #{fails}." <br />
+                <br />
+                if passes >= 8 <br />
+                  &nbsp;&nbsp;puts "We request to raise the tuition, we fancy huh?" <br />
+                else <br />
+                  &nbsp;&nbsp;puts "We failed, we should kill ourselves." <br />
+                end <br />
+            
+            </div>
+          </p>
+          <p>
+            <h2>Benefits of using a flowchart</h2>
+            <ol>
+              <li>Focus on the logic rather than syntax</li>
+              <li>Helps analyzes the problem</li>
+            </ol>
+            Now go make awesome flowcharts to create master plans.. I don't know... how to get back at an ex or something useful.
+          </p>
+        </section>
+      </div>
+      <aside class="sidebar">
+        <section class="count_down">
+          <h2>The Countdown</h2>
+          <!--<h5>August</h5>
+          <table>
+            <tr>
+              <td> S </td>
+              <td> M </td>
+              <td> T </td>
+              <td> W </td>
+              <td> T </td>
+              <td> F</td>
+              <td> S </td>
+            </tr>
+            <tr>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td> 1 </td>
+              <td> 2 </td>
+            </tr>
+            <tr>
+              <td> 3 </td>
+              <td> 4 </td>
+              <td> 5 </td>
+              <td> 6 </td>
+              <td> 7 </td>
+              <td> 8 </td>
+              <td> 9 </td>
+            </tr>
+            <tr>
+              <td> 10 </td>
+              <td> 11 </td>
+              <td> 12 </td>
+              <td> 13 </td>
+              <td> 14 </td>
+              <td> 15 </td>
+              <td> 16 </td>
+            </tr>
+            <tr>
+              <td> 17 </td>
+              <td> 18 </td>
+              <td> 19 </td>
+              <td> 20 </td>
+              <td> 21 </td>
+              <td> 22 </td>
+              <td> 23 </td>
+            </tr>
+            <tr>
+              <td> 24 </td>
+              <td> 25 </td>
+              <td> 26 </td>
+              <td> 27 </td>
+              <td> 28 </td>
+              <td> 29 </td>
+              <td> 30 </td>
+            </tr>
+            <tr>
+              <td> 31 </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+            </tr>
+          </table>
+          <h5>July</h5>
+          <table>
+            <tr>
+              <td> S </td>
+              <td> M </td>
+              <td> T </td>
+              <td> W </td>
+              <td> T </td>
+              <td> F</td>
+              <td> S </td>
+            </tr>
+            <tr>
+              <td>  </td>
+              <td>  </td>
+              <td> 1</td>
+              <td> 2 </td>
+              <td> 3 </td>
+              <td> 4 </td>
+              <td> 5 </td>
+            </tr>
+            <tr>
+              <td> 6 </td>
+              <td> 7 </td>
+              <td> 8 </td>
+              <td> 9 </td>
+              <td> 10 </td>
+              <td> 11 </td>
+              <td> 12 </td>
+            </tr>
+            <tr>
+              <td> 13 </td>
+              <td> 14 </td>
+              <td> 15 </td>
+              <td> 16 </td>
+              <td> 17 </td>
+              <td> 18 </td>
+              <td> 19 </td>
+            </tr>
+            <tr>
+              <td> 20 </td>
+              <td> 21 </td>
+              <td> 22 </td>
+              <td> 23 </td>
+              <td> 24 </td>
+              <td> 25 </td>
+              <td> 26 </td>
+            </tr>
+            <tr>
+              <td> 27 </td>
+              <td> 28 </td>
+              <td> 29 </td>
+              <td> 30 </td>
+              <td> 31 </td>
+              <td>  </td>
+              <td>  </td>
+            </tr>
+          </table>
+          <h5>June</h5>
+          <table>
+            <tr>
+              <td> S </td>
+              <td> M </td>
+              <td> T </td>
+              <td> W </td>
+              <td> T </td>
+              <td> F</td>
+              <td> S </td>
+            </tr>
+            <tr>
+              <td> 1 </td>
+              <td> 2 </td>
+              <td> 3 </td>
+              <td> 4 </td>
+              <td> 5 </td>
+              <td> 6 </td>
+              <td> 7 </td>
+            </tr>
+            <tr>
+              <td> 8 </td>
+              <td> 9 </td>
+              <td> 10 </td>
+              <td> 11 </td>
+              <td> 12 </td>
+              <td> 13 </td>
+              <td> 14 </td>
+            </tr>
+            <tr>
+              <td> 15 </td>
+              <td> 16 </td>
+              <td> 17 </td>
+              <td> 18 </td>
+              <td> 19 </td>
+              <td> 20 </td>
+              <td> 21 </td>
+            </tr>
+            <tr>
+              <td> 22 </td>
+              <td> 23 </td>
+              <td> 24 </td>
+              <td> 25 </td>
+              <td> 26 </td>
+              <td> 27 </td>
+              <td> 28 </td>
+            </tr>
+            <tr>
+              <td> 29 </td>
+              <td> 30 </td>
+              <td> </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+            </tr>
+          </table> -->
+
+          <h5>May</h5>
+          <table>
+            <tr>
+              <td> S </td>
+              <td> M </td>
+              <td> T </td>
+              <td> W </td>
+              <td> T </td>
+              <td> F</td>
+              <td> S </td>
+            </tr>
+            <tr>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td>  </td>
+              <td class="passed"> 1 </td>
+              <td class="passed"> 2 </td>
+              <td class="passed"> 3 </td>
+            </tr>
+            <tr>
+              <td class="passed"> 4 </td>
+              <td class="passed"> 5 </td>
+              <td class="passed"> 6 </td>
+              <td class="passed"> 7 </td>
+              <td> 8 </td>
+              <td> 9 </td>
+              <td> 10 </td>
+            </tr>
+            <tr>
+              <td> 11 </td>
+              <td> 12 </td>
+              <td> 13 </td>
+              <td> 14 </td>
+              <td> 15 </td>
+              <td> 16 </td>
+              <td> 17 </td>
+            </tr>
+            <tr>
+              <td> 18 </td>
+              <td> 19 </td>
+              <td> 20 </td>
+              <td> 21 </td>
+              <td> 22 </td>
+              <td> 23 </td>
+              <td> 24 </td>
+            </tr>
+            <tr>
+              <td> 25 </td>
+              <td> 26 </td>
+              <td> 27 </td>
+              <td> 28 </td>
+              <td> 29 </td>
+              <td> 30 </td>
+              <td> 31</td>
+            </tr>
+          </table>
+          <h5>April</h5>
+          <table>
+            <tr>
+              <td> S </td>
+              <td> M </td>
+              <td> T </td>
+              <td> W </td>
+              <td> T </td>
+              <td> F</td>
+              <td> S </td>
+            </tr>
+            <tr>
+              <td>  </td>
+              <td>  </td>
+              <td class="passed"> 1 </td>
+              <td class="passed"> 2 </td>
+              <td class="passed"> 3 </td>
+              <td class="passed"> <a href="#442014"> 4 </a> </td>
+              <td class="passed"> 5 </td>
+            </tr>
+            <tr>
+              <td class="passed"> 6 </td>
+              <td class="passed"> 7 </td>
+              <td class="passed"> <a href="#482014"> 8 </a> </td>
+              <td class="passed"> <a href="#492014"> 9 </a> </td>
+              <td class="passed"> <a href="#4102014"> 10 </td>
+              <td class="passed"> 11 </td>
+              <td class="passed"> 12 </td>
+            </tr>
+            <tr>
+              <td class="passed"> 13 </td>
+              <td class="passed"> 14 </td>
+              <td class="passed"> 15 </td>
+              <td class="passed"> 16 </td>
+              <td class="passed"> 17 </td>
+              <td class="passed"> 18 </td>
+              <td class="passed"> 19 </td>
+            </tr>
+            <tr>
+              <td class="passed"> 20 </td>
+              <td class="passed"> 21 </td>
+              <td class="passed"> 22 </td>
+              <td class="passed"> 23 </td>
+              <td class="passed"> 24 </td>
+              <td class="passed"> 25 </td>
+              <td class="passed"> 26 </td>
+            </tr>
+            <tr>
+              <td class="passed"> 27 </td>
+              <td class="passed"> 28 </td>
+              <td class="passed"> 29 </td>
+              <td class="passed"> 30</td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </table>
+          
+          <h5>March</h5>
+          <table>
+            <tr>
+              <td> S </td>
+              <td> M </td>
+              <td> T </td>
+              <td> W </td>
+              <td> T </td>
+              <td> F</td>
+              <td> S </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td>  </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> 1</td>
+            </tr>
+            <tr>
+              <td> 2</td>
+              <td> 3 </td>
+              <td> 4</td>
+              <td> 5</td>
+              <td> 6</td>
+              <td> 7</td>
+              <td> 8</td>
+            </tr>
+            <tr>
+              <td> 9</td>
+              <td> 10 </td>
+              <td> 11</td>
+              <td> 12</td>
+              <td> 13</td>
+              <td> 14</td>
+              <td> 15</td>
+            </tr>
+            <tr>
+              <td> 16</td>
+              <td> 17 </td>
+              <td> 18</td>
+              <td> 19</td>
+              <td> 20</td>
+              <td> 21</td>
+              <td> 22</td>
+            </tr>
+            <tr>
+              <td> 23</td>
+              <td> 24 </td>
+              <td> 25</td>
+              <td> 26</td>
+              <td> 27</td>
+              <td> 28</td>
+              <td> 29</td>
+            </tr>
+            <tr>
+              <td> 30</td>
+              <td class="passed"> 31 </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+        <h2>Other Resources</h2>
+        </section>
+        
+      </aside>
+    </article> 
+   
+    <footer class="top_one_edge_shadow">
+      sandymliao.com &copy; 2014. All Rights Reserved.
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,137 @@
+/*------------------------------------------------------------------*/
+/*-------------BASE CSS FOR SANDYMLIAO.COM BY SANDY LIAO------------*/
+/*------------------------------------------------------------------*/
+
+/*-----------------------BASIC ELEMENT STYLES-----------------------*/
+body{
+  width:100%;
+  position: relative;
+}
+
+article,footer{
+  margin: auto;
+}
+article{
+  width:75%;
+}
+blockquote{
+  font-style: oblique;
+  font-size: 16px;
+  font-family: georgia, serif;
+}
+.bq_author{
+  float: right;
+  font-size: 14px;
+
+}
+
+footer{
+  font-size: 12px;
+  font-family: impact, sans-serif;
+  clear: both;
+  background-color: #e7a9cc;
+  text-align: center;
+  padding:10px;
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+}
+p{
+  margin:0;
+}
+ul{
+  list-style-type: none;
+  margin:0;
+}
+a{
+  text-decoration: none;
+}
+.code_block{
+  background-color: #000;
+  color:#00B2EE;
+  border: #555 1px solid;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 13px;
+  font-family: "Courier New", sans-serif;
+}
+.code_block h4{
+  background-color: #888;
+  color:#000;
+}
+.code_block h4, .code_block p {
+  padding: 5px 15px;
+}
+.elab{
+  color:#E0EEE0;
+}
+
+.rounded{
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px; /* future proofing */
+  -khtml-border-radius: 15px; /* for old Konqueror browsers */
+}
+.one_edge_shadow {
+  -webkit-box-shadow: 0 8px 6px -6px #555;
+     -moz-box-shadow: 0 8px 6px -6px #555;
+          box-shadow: 0 8px 6px -6px #555;
+}
+.top_one_edge_shadow {
+  -webkit-box-shadow: 0 -8px 6px -6px #555;
+     -moz-box-shadow: 0 -8px 6px -6px #555;
+          box-shadow: 0 -8px 6px -6px #555;
+}
+/* #e7a9cc*/
+/*---------------------------HEADER STYLES--------------------------*/
+.social_media{
+  background-color: #000;
+  text-align: right;
+  border-top: #e7a9cc solid 3px;
+  padding:5px;
+
+}
+
+.social_media li{
+  display: inline-block;
+}
+.social_media a{
+  height:0;
+}
+.social_media img{
+  margin-top:5px;
+  margin-left:5px;
+  width:30px;
+
+}
+
+
+
+
+/*--------------------------NAVIGATION STYLES-----------------------*/
+.main_nav{
+  display:block;
+  clear:both;
+}
+.main_nav li{
+  padding: 15px;
+  display: inline-block;
+}
+
+.main_nav li a{
+  color: #000;
+}
+
+
+
+
+/*----------------------------BODY STYLES---------------------------*/
+section{
+  display:block;
+}
+
+
+
+
+
+/*---------------------------FOOTER STYLES--------------------------*/
