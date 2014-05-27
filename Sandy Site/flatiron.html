@@ -31,6 +31,270 @@
 
     <article>
       <div class="postings">
+        <section id="5212014">
+          <hgroup>
+            <h4>May 21, 2014</h4>
+              <blockquote>“Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code." -- Christopher Thompson
+              </blockquote>
+              
+            <h1>Ruby &amp; JavaScript Equivalents </h1>
+          </hgroup>
+          <p>  
+            Ruby is such an awesome programming language because it offers so many predefined methods for you to use for Strings, Arrays, Numbers, etc. I find myself when coding in JavaScript still using Ruby methods and sit there pulling my hair out wondering why my code doesn't work. So let's look at some predefined Ruby methods and see if JavaScript has anything that does the same thing. Exciting.. ehh?
+          </p>
+          <p>
+            <!-- <h2>Arrays</h2> -->
+
+
+            <h2>Numbers</h2>
+
+            <h5>To return the smallest integer greater than the number.</h5>
+            Ruby: .ceil
+            <div class = "code_block">
+              1.2.ceil <br />
+              => 2
+            </div>
+            JavaScript: Math.ceil();
+            <div class = "code_block">
+              Math.ceil(1.2); <br />
+              => 2
+            </div>
+
+            <h5>To check if a number is even.</h5>
+            Ruby: even?
+            <div class = "code_block">
+              4.even? <br />
+              => true
+            </div>
+            JavaScript: AHHHH! No such method. Let's write our own.
+            <div class = "code_block">
+              function isEvenNum(num){ <br />
+              &nbsp; var num = num; //4 <br />
+              &nbsp; if (num % 2 === 0){ <br />
+              &nbsp; &nbsp; return true; <br />
+              &nbsp; } <br />
+              &nbsp; else{ <br />
+              &nbsp; &nbsp; return false;  <br />
+              &nbsp; } <br />
+              }; <br />
+              => true
+            </div>
+
+            <h5>To return the smallest integer less than the number.</h5>
+            Ruby: .floor
+            <div class = "code_block">
+              5.7.floor <br />
+              => 5
+            </div>
+            JavaScript: Math.floor();
+            <div class = "code_block">
+              Math.floor(5.7); <br />
+              => 5
+            </div>
+
+            <h5>To check if an object is a integer.</h5>
+            Ruby: .integer?
+            <div class = "code_block">
+              5.7.integer? <br />
+              => false
+            </div>
+            JavaScript: AHHHH! No such method. Let's write our own.
+            <div class = "code_block">
+              function isInteger(num){ <br />
+              &nbsp;var num = num; //5.7  <br />
+              &nbsp;return typeof num  === 'number' &amp;&amp; num % 1 === 0; <br />
+              }; <br />
+              => false
+            </div>
+
+            <h5>To round a floating number to the nearest integer.</h5>
+            Ruby: .round
+            <div class = "code_block">
+              45.3.round <br />
+              => 45
+            </div>
+            JavaScript: Math.round();
+            <div class = "code_block">
+              Math.round(45.3); <br />
+              => 45
+            </div>
+
+            <h5>To convert an number into a string.</h5>
+            Ruby: .to_s 
+            <div class = "code_block">
+              14587.to_s <br />
+              => "14587"
+            </div>
+            JavaScript: .toString();
+            <div class = "code_block">
+              14587.toString(); <br />
+              => "14587"
+            </div>
+
+
+            <h2>Strings</h2>
+
+            <h5>To convert the entire string to its lower case form.</h5>
+            Ruby: .downcase 
+            <div class = "code_block">
+              "HELLO".downcase <br />
+              => "hello"
+            </div>
+            JavaScript: .toLowerCase();
+            <div class = "code_block">
+              "HELLO".toLowerCase(); <br />
+              => "hello"
+            </div>
+
+            <h5>To replace letters in a string.</h5>
+            Ruby: .gsub
+            <div class = "code_block">
+              "Hello".gsub("l", "@")<br /> 
+              => "He@@o" <br /> 
+            </div>
+            JavaScript: .replace();
+            <div class = "code_block">
+              "Hello".replace(/l/g, "@");<br /> 
+              => "He@@o"
+            </div>
+
+             <h5>To find the index of a character.</h5>
+            Ruby: .index
+            <div class = "code_block">
+              "Hello".index("e")<br /> 
+              => 1 <br /> 
+            </div>
+            JavaScript: .search();
+            <div class = "code_block">
+              "Hello".search("e");<br /> 
+              => 1
+            </div>
+
+            <h5>To return a substring.</h5>
+            Ruby: .slice
+            <div class = "code_block">
+              "Hello".slice(4)<br /> 
+              => "o" <br /> 
+            </div>
+            JavaScript: .slice();
+            <div class = "code_block">
+              "Hello".slice(4);<br /> 
+              => "o"
+            </div>
+
+            <h5>To remove whitespaces from the beginning and the end of the string.</h5>
+            Ruby: .strip
+            <div class = "code_block">
+              "    Hello    ".strip<br /> 
+              => "Hello" <br /> 
+            </div>
+            JavaScript: .trim();
+            <div class = "code_block">
+              "    Hello    ".trim();<br /> 
+              => "Hello"
+            </div>
+
+            <h5>* To swap cases of each letter in a string.</h5>
+            Ruby: .swapcase
+            <div class = "code_block">
+              "hEllO".swapcase<br /> 
+              => "HeLLo"
+            </div>
+            JavaScript: AHHHH! No such method. Let's write our own.
+            <div class = "code_block">
+              
+              function swapCase(str) { <br />
+
+              &nbsp;var str = str //"hEllo" <br />
+              &nbsp;var new_str =''; <br /> <br />
+
+
+
+               &nbsp;for (var i = 0; i < str.length; i++){ <br />
+                 &nbsp;&nbsp;if (str[i] === str[i].toUpperCase()){ <br />
+                 &nbsp;&nbsp; &nbsp;new_str += str[i].toLowerCase(); <br />
+                 &nbsp;&nbsp;} <br />
+                 &nbsp;&nbsp;else{ <br />
+                 &nbsp;&nbsp; &nbsp;new_str += str[i].toUpperCase(); <br />
+                 &nbsp;&nbsp;} <br />
+                 &nbsp;} <br />
+               } <br />
+              => "HeLLo"
+            </div>
+
+            <h5>To convert a string to an integer.</h5>
+            Ruby: .to_i
+            <div class = "code_block">
+              "4587".to_i<br /> 
+              => 4587
+            </div>
+            JavaScript: parseInt();
+            <div class = "code_block">
+              var str_num = "4587" <br />
+              parseInt(str_num); <br />
+              => 4587
+            </div>
+            
+            <h5>To convert the entire string to its lower case form.</h5>
+            Ruby: .upcase<br />
+            <div class = "code_block">
+              "hello".upcase <br />
+              => "HELLO"
+            </div>
+            JavaScript: .toUpperCase(); 
+            <div class = "code_block">
+              "hello".toUpperCase(); <br />
+              => "HELLO"
+            </div>
+
+            There are still plenty more methods that Ruby has that JavaScript may or may not have, but these are the ones that I frequently use and find the most helpful. So keep exploring what both languages have to offer!
+          </p>
+          
+        
+        </section>
+         <!-- <section id="5212014">
+          <hgroup>
+            <h4>May 21, 2014</h4>
+              <blockquote>“Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code." -- Christopher Thompson
+              </blockquote>
+              
+            <h1>Enumerators &amp; Return Values</h1>
+          </hgroup>
+          <p>  
+            Ruby is such an awesome programming language because it offers so many predefined methods for you to use to extract information in any given collection of information. Unlike JavaScript, where we would have to manually write out the code to get it to do the same stuff. Don't get me wrong, I enjoy working with Javascript but after being expose to Ruby, I am kind of.. you know.. SPOILED! Let's take a look at Enumerables. Exciting.. ehh?
+          </p>
+          <p>
+            <h2>Enumerables and Enumerators</h2>
+            In Ruby, there is a module (this is like a toolkit with a variety of defined methods that we can use in a specific class) called "Enumerables" which is used as a mixin in the Array class. Enumerables are used to get elements out of an array, one at a time and do things to each one. (Yes, you can do anything you want to them.. even horrible things... as long as Ruby allows you to.) <br /> <br />
+            All these enumerators are awesome and there are so many ways to do one thing, but one problem I am having is remembering which each of them returns. Sometimes I end up spending a lot of time just plugging methods I thought would work, but because it doesn't return what I expected, I wouldn't get the result I want. <br /> <br />
+          </p>
+          <p>
+            <h2>Frequently Used Ones</h2>
+
+            <h4>.each<h4>
+            <figure>
+              <img src="images/each_method.gif" alt = ".each Method Gif" />
+            </figure>
+            Code:
+            <div class = "code_block">
+              array.each do |element| <br />
+                &nbsp;&nbsp; element do some code stuff thingy thing <br />
+              end <br /> <br />
+
+              #The return value of this code block is the original array. Any work that has been done to each element in Vegas, stays in Vegas.
+              
+            </div>
+            <h4>.map</h4>
+            <figure>
+              <img src="images/map_method.gif" alt = ".map Method Gif" />
+            </figure>
+            Code:
+            <div class = "code_block">
+            </div>
+          </p>
+        
+        </section> -->
+      
         <section id="572014">
           <hgroup>
             <h4>May 7, 2014</h4>
@@ -276,7 +540,7 @@
               <td>  </td>
               <td>  </td>
             </tr>
-          </table>
+          </table> -->
           <h5>June</h5>
           <table>
             <tr>
@@ -333,7 +597,7 @@
               <td>  </td>
               <td>  </td>
             </tr>
-          </table> -->
+          </table> 
 
           <h5>May</h5>
           <table>
@@ -360,31 +624,31 @@
               <td class="passed"> 5 </td>
               <td class="passed"> 6 </td>
               <td class="passed"> 7 </td>
-              <td> 8 </td>
-              <td> 9 </td>
-              <td> 10 </td>
+              <td class="passed"> 8 </td>
+              <td class="passed"> 9 </td>
+              <td class="passed"> 10 </td>
             </tr>
             <tr>
-              <td> 11 </td>
-              <td> 12 </td>
-              <td> 13 </td>
-              <td> 14 </td>
-              <td> 15 </td>
-              <td> 16 </td>
-              <td> 17 </td>
+              <td class="passed"> 11 </td>
+              <td class="passed"> 12 </td>
+              <td class="passed"> 13 </td>
+              <td class="passed"> 14 </td>
+              <td class="passed"> 15 </td>
+              <td class="passed"> 16 </td>
+              <td class="passed"> 17 </td>
             </tr>
             <tr>
-              <td> 18 </td>
-              <td> 19 </td>
-              <td> 20 </td>
-              <td> 21 </td>
-              <td> 22 </td>
-              <td> 23 </td>
-              <td> 24 </td>
+              <td class="passed"> 18 </td>
+              <td class="passed"> 19 </td>
+              <td class="passed"> 20 </td>
+              <td class="passed"> 21 </td>
+              <td class="passed"> 22 </td>
+              <td class="passed"> 23 </td>
+              <td class="passed"> 24 </td>
             </tr>
             <tr>
-              <td> 25 </td>
-              <td> 26 </td>
+              <td class="passed"> 25 </td>
+              <td class="passed"> 26 </td>
               <td> 27 </td>
               <td> 28 </td>
               <td> 29 </td>
