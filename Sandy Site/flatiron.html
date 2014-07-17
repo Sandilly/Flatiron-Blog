@@ -34,6 +34,146 @@
 
     <article>
       <div class="postings">
+        <section id="7172014">
+          <hgroup>
+            <h4>July 17, 2014</h4>
+              <blockquote>“ First, solve the problem. Then, write the code. ”  -- John Johnson
+              </blockquote>
+            <h1>Form Helpers: Link_to VS. Button_to</h1>
+          </hgroup>
+          <p>
+            The link_to and button_to are helper methods used for creating links and receiving URLs in Rails. Recently, while working on our class project, I ran into some issues using the link_to method in my Rails "Edit.html.erb" view page. The code seem so right but it just wouldn't delete the item.
+          </p>
+
+          <div class = "code_block">
+            &lt;h1&gt;<%= @product.name %> &lt;/h1&gt; <br>
+              <%= form_for @product, url: {action: "update"}, html: {class: "update_form"} do |f| %> <br>
+
+              &nbsp;&nbsp;&lt;p&gt;Date Added : <%= @product.created_at %> &lt;/p&gt; <br>
+              &nbsp;&nbsp;&lt;p&gt;Name : <%= @product.name %>&lt;/p&gt;<br>
+
+              &nbsp;&nbsp;<%= f.label :time%> <br>
+              &nbsp;&nbsp;<%= f.text_field :time%> <br>
+
+              &nbsp;&nbsp;<%= f.label :storage%> <br>
+              &nbsp;&nbsp;<%= f.text_field :storage%> <br>
+
+              &nbsp;&nbsp;<%= link_to "Back", product_path %> <br>
+              &nbsp;&nbsp;<%= f.submit "Update Item" %> <br>
+             <span class ="highlight"> &nbsp;&nbsp;<%= link_to 'Destroy', @product, :confirm => 'Are you sure?', :method => :delete %>  </span>
+
+             <% end %> <br>
+          </div>
+          <p>I tried to change the helper method to button_to. This was even worst. The update was deleting the item and doing backflips. The delete button would just direct me back to the show view. I give up. </p>
+          <div class = "code_block">
+            &lt;h1&gt;<%= @product.name %> &lt;/h1&gt; <br>
+              <%= form_for @product, url: {action: "update"}, html: {class: "update_form"} do |f| %> <br>
+
+              &nbsp;&nbsp;&lt;p&gt;Date Added : <%= @product.created_at %> &lt;/p&gt; <br>
+              &nbsp;&nbsp;&lt;p&gt;Name : <%= @product.name %>&lt;/p&gt;<br>
+
+              &nbsp;&nbsp;<%= f.label :time%> <br>
+              &nbsp;&nbsp;<%= f.text_field :time%> <br>
+
+              &nbsp;&nbsp;<%= f.label :storage%> <br>
+              &nbsp;&nbsp;<%= f.text_field :storage%> <br>
+
+              &nbsp;&nbsp;<%= link_to "Back", product_path %> <br>
+              &nbsp;&nbsp;<%= f.submit "Update Item" %> <br>
+              &nbsp;&nbsp;<span class ="highlight"><%= button_to "Delete Item", @product, method: "delete" %> </span> <br>
+              <% end %> <br>
+
+           
+
+          </div>
+          <p>This is my bootleg code that worked. I created a button_to helper method outside the update form and the items started disappearing as I clicked! Yay! Programming Voodoo. Why did it work? I wasn't even sure. But since it was working, I left it. Don't judge me.</p>
+          <div class = "code_block">
+            &lt;h1&gt;<%= @product.name %> &lt;/h1&gt; <br>
+              <%= form_for @product, url: {action: "update"}, html: {class: "update_form"} do |f| %> <br>
+
+              &nbsp;&nbsp;&lt;p&gt;Date Added : <%= @product.created_at %> &lt;/p&gt; <br>
+              &nbsp;&nbsp;&lt;p&gt;Name : <%= @product.name %>&lt;/p&gt;<br>
+
+              &nbsp;&nbsp;<%= f.label :time%> <br>
+              &nbsp;&nbsp;<%= f.text_field :time%> <br>
+
+              &nbsp;&nbsp;<%= f.label :storage%> <br>
+              &nbsp;&nbsp;<%= f.text_field :storage%> <br>
+
+              &nbsp;&nbsp;<%= link_to "Back", product_path %> <br>
+              &nbsp;&nbsp;<%= f.submit "Update Item" %> <br>
+
+              <% end %> <br>
+
+           <span class ="highlight"> <%= button_to "Delete Item", @product, method: "delete" %> </span>
+
+          </div>
+
+          <p>After my group's project demo, Ian (our awesome TA) was looking through my code and was wondering why the link_to didn't work. After some Google diving, he figured it out. Continue reading below for a hint! You probably already know..</p>
+          <h3>So, what exactly is the difference between the two?</h3> <br>
+          <ul>
+            <li>
+              <p><b>*link_to:</b> This method is to simply create a link on a page to redirect the user to a new path in the app. In general, links are mainly created for navigation purposes (GET requests).  </p>
+              
+              <p>In this example, we are creating a simple link called "Back", that takes us back to the product_path:</p>
+              <div class = "code_block">
+                <%= link_to "Back", product_path %>
+              </div>
+              
+              <p>In this example, we are creating a link called "Destroy", that takes the object and calls the "delete" method on it:</p>
+              <div class = "code_block">
+                <%= link_to 'Destroy', @product, :confirm => 'Are you sure?', :method => :delete %>
+              </div>
+              <p>In order to use the link_to method with other method calls, Rails support them through JavaScript. So, if the JavaScript is disabled or not linked to the page, it would default back to the "GET" method no matter what method call you give it.</p>
+            </li>
+            <li>
+               <p><b>*button_to:</b> This generates a button that is  actually a form in itself. So, when the user clicks on the button, the form is submitted through the given URL. </p>
+
+               <p>This example is almost identical, but the button_to created a form.</p>
+              <div class = "code_block">
+                <%= button_to "Delete Item", @product, method: "delete" %>
+              </div>
+
+              <p>This is said to be the recommended way for any POST(default), CREATE, DELETE method calls because modification through a link can be accessed through a link, where search bots or crawlers can manipulate that data which then can become a security issue. Whew! That's a mouthful. </p>
+
+              <p>You can use the button_to to call "GET" method as well.</p>
+              
+              <div class = "code_block">
+                <%= button_to "New User", new_user_path, method: :get %>
+              </div>
+              <p>It is not JavaScript dependent for it to work.</p>
+            </li>
+          </ul>
+
+          <h3>The Fix</h3>
+          <p>Make sure you include these two lines in the &lt;HEAD&gt; tags in your Application.html.erb. Mines was deleted during a GIT merge.</p>
+          <div class = "code_block">
+            <%= csrf_meta_tag %> <br>
+            <%= javascript_include_tag "application" %>
+          </div>
+          <p>The Edit.html.erb File (Using the "link_to"):</p>
+          <div class = "code_block">
+            &lt;h1&gt;<%= @product.name %> &lt;/h1&gt; <br>
+              <%= form_for @product, url: {action: "update"}, html: {class: "update_form"} do |f| %> <br>
+
+              &nbsp;&nbsp;&lt;p&gt;Date Added : <%= @product.created_at %> &lt;/p&gt; <br>
+              &nbsp;&nbsp;&lt;p&gt;Name : <%= @product.name %>&lt;/p&gt;<br>
+
+              &nbsp;&nbsp;<%= f.label :time%> <br>
+              &nbsp;&nbsp;<%= f.text_field :time%> <br>
+
+              &nbsp;&nbsp;<%= f.label :storage%> <br>
+              &nbsp;&nbsp;<%= f.text_field :storage%> <br>
+
+              &nbsp;&nbsp;<%= link_to "Back", product_path %> <br>
+              &nbsp;&nbsp;<%= f.submit "Update Item" %> <br>
+             <span class ="highlight"> &nbsp;&nbsp;<%= link_to 'Destroy', @product, :confirm => 'Are you sure?', :method => :delete %>  </span>
+
+             <% end %> <br>
+          </div>
+          <p>When creating your forms, it is good to understand which helper method can best serve your needs. Just remember to include the JavaScript file needed when using the link_to helper method when using it for modification methods or else... pop some pills!</p>
+        </section>
+      
         <section id="6262014">
           <hgroup>
             <h4>June 29, 2014</h4>
@@ -812,28 +952,28 @@
               <td>  </td>
               <td>  </td>
               <td>  </td>
-              <td> 1</td>
-              <td> 2 </td>
-              <td> 3 </td>
-              <td> 4 </td>
+              <td class="passed"> 1</td>
+              <td class="passed"> 2 </td>
+              <td class="passed"> 3 </td>
+              <td class="passed"> 4 </td>
              
             </tr>
             <tr>
-              <td> 5 </td>
-              <td> 6 </td>
-              <td> 7 </td>
-              <td> 8 </td>
-              <td> 9 </td>
-              <td> 10 </td>
-              <td> 11 </td>
+              <td class="passed"> 5 </td>
+              <td class="passed"> 6 </td>
+              <td class="passed"> 7 </td>
+              <td class="passed"> 8 </td>
+              <td class="passed"> 9 </td>
+              <td class="passed"> 10 </td>
+              <td class="passed"> 11 </td>
               
             </tr>
             <tr>
-              <td> 12 </td>
-              <td> 13 </td>
-              <td> 14 </td>
-              <td> 15 </td>
-              <td> 16 </td>
+              <td class="passed"> 12 </td>
+              <td class="passed"> 13 </td>
+              <td class="passed"> 14 </td>
+              <td class="passed"> 15 </td>
+              <td class="passed"> 16 </td>
               <td> 17 </td>
               <td> 18 </td>
               
@@ -910,8 +1050,8 @@
             </tr>
             <tr>
               <td class="passed"> 28 </td>
-              <td > 29 </td>
-              <td> 30 </td>
+              <td class="passed"> 29 </td>
+              <td class="passed"> 30 </td>
               <td> </td>
               <td>  </td>
               <td>  </td>
