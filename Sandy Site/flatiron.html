@@ -13,6 +13,9 @@
     <!--[if lt IE 9]!>
       <script src="http://html5shim.googlecode.com/svn/trunk/html.js"></script>
     <![endif]-->
+
+    <link rel ="stylesheet" href="css/robot.css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
    <header>
@@ -25,12 +28,321 @@
       
 
       <a href="http://www.sandymliao.com"><img class="logo" src="images/logo.png" alt="Sandymliao.com logo" /></a>
-      <p class="blog_header rounded"><img class="heart"src="images/heart.png" alt="Heart <3" />THE FLATIRON LIFE</p> 
+      <p class="blog_header rounded"><img class="heart"src="images/heart.png" alt="Heart <3" />THE FLATIRON LIFE : BK-001</p> 
 
     </header>
 
     <article>
       <div class="postings">
+        <section id="6262014">
+          <hgroup>
+            <h4>June 29, 2014</h4>
+              <blockquote>“What we have to learn to do, we learn by doing.”  -- Aristotle
+              </blockquote>
+            <h1>Back It Up: Time Machine VS. Imaging</h1>
+          </hgroup>
+          <p>
+            I learned a very hard lesson while I was back in college: "Back up your SH!T". Everything. Twice. Tres. As many times as you can. Then, dig a hole somewhere and bury it in multiple places or simply send it to a cloud server. My 500GB Western Digital hard drive had broke with two years worth of artwork on it. I took it to TechServe to see if they can retrieve any info from it and they told me it would cost about $400 and no guarantees that all the files would be gathered from the dead drive. Kill me. They'll probably just tell me my life isn't even worth that much. 
+          </p>
+          <p>
+            Ever since joining the Flatiron School, the amount of software and work that is saved on my Apple laptop is gynormous and recently the browser tabs has been flickering. To be safe, I've been looking at a couple options and was wondering the differences between using Apple's Time Machine and making an image of my computer. (I am using OS X 10.8.5.)
+          </p>
+          <h3><img class = "sm_icons"src = "images/tm_icon.png" alt = "Time Machine Icon"> Time Machine</h3>
+          <p>
+            The OS X Time machine is a built in backup feature that works on the Mac or an external hard drive. When you connect an external hard drive to Time Machine, allow it to use it and let it do it's job. It automatically backs up your system files, applications, accounts, preferences, email, media, photos and document files. The awesome thing about Time Machine is that it keeps track of how your system looks and everything currently present on your computer. After that, it keeps incremental back ups to any modified or new files. It creates a snapshot of the entire system at a given time.
+          </p>
+          <h4>Time Machine Using an External Drive</h4>
+          <p> 
+            When you first connect your external hard drive, a dialog box should show up. 
+            <figure> 
+              <img class= "standard_img" src="images/mac_setup1.png" alt="Time Machine Setup Dialog Box" />
+            </figure>
+
+            To use the drive as a backup, simply just click on the "Use as Backup Disk" button.
+          </p>
+          <p>
+             ** If you had previously hit the "Don't Use" button, you can go to "System Preferences" in your dock or find it in Spotlight. Then, select "Time Machine." >> Toggle the "On/Off" switch to "ON." (A list should slide down with your external drive listed on it.) >> Select your drive. **
+            <figure> 
+              <img class= "standard_img" src="images/select_disk.png" alt="Select Disk for Time Machine" />
+            </figure>
+
+            **Encrypt Backups:  This is for extra security when you backup your system. It will prompt you to set up a password and a password hint. This feature is only available for Time Capsule, partitions and disks attached directly to your computer. If it is grayed out, you can hover your mouse over the checkbox and an explanation will pop out. **
+          </p>
+          <p>
+            To exclude certain files/folders from the backup, you can click on "Options" in the Time Machine dialog box. This enables you to select items that want Time Machine to avoid.
+          <p>
+            <figure> 
+              <img class= "standard_img" src="images/tm_exclusion.png" alt="Time Machine Exclusions" />
+            </figure>
+          </p>
+          <p>
+            Click "Save" and you are all set up! 
+          </p>
+          <p>
+            Note that the Time Machine does not keep all the backups forever and it doesn't tell you when it deletes them. It is also not bootable, meaning that all files and system info must be restored/ reinstalled to be accessed.
+          </p>
+          
+          <h3><img class = "sm_icons"src = "images/imaging.jpg" alt = "Imaging Icon"> Disk Imaging</h3>
+          <p>
+            What is Disk Imaging? Disk imaging is computer files that contain the structure of a disk volume of the entire storage device. It is created by making a sector-by-sector copy of the contents from the original storage device. It is bootable. If your hard drive fails, you can boot from the clone immediately, containing everything that was present at the time of the clone. Images are snapshots of the entire disk. It doesn't incrementally backup new files/data. So, in order to keep track of new or modified files/data, you would have to create another image, which could be time consuming. It is recommended to make an image once a day since the procedure can be lengthy. But there are some softwares out there that make this process a little simplier.
+          </p>
+
+            Imaging Softwares:
+            <ol>
+              <li>
+                <a href ="http://www.bombich.com">Carbon Copy Cloner</a> $39.95
+                <ul>
+                  <li> Why it's awesome:</li>
+                  <li>-It creates an exact, bootable backup of the Mac OS X boot drive.</li>
+                  <li>-Because it supports block-by-block cloning, it copies everything faster.</li>
+                  <li>-After the first backup, it can sync changes and updates the backups.</li>
+                  <li>-It archives old/deleted versions of files.</li>
+                  <li>-You can backup data to any hard drive or even somewhere on the internet.</li>
+                  <li>-You can schedule backup tasks.</li>
+                  <li>-Great, easy-to-use graphic user interface.</li>
+                  <li>-You can encrypt backups.</li>
+                  <li>-It can handle incremental backups and partial backups.</li>
+                </ul>
+              </li>
+              <li><a href ="http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html">Super Duper</a> $Free (but can unlock features for $27.95)
+                <ul>
+                  <li> Why it's awesome:</li>
+                  <li>-Creates a bootable backup.</li>
+                  <li>-Clear and friendly interface.</li>
+                </ul>
+              </li>
+            </ol>
+          </p>
+          <p>
+            Buying a couple hard drives still beats paying $400.00 for a unguaranteed attempt to retrieve info. So, set one up to use Time Machine and if you are able to pay for one of these disk cloning softwares, it doesn't hurt to have additional backups especially since we are in the tech field now. Go back that Mac up! Or kill yourself when you have that FML moment.
+          </p>
+          
+        </section>
+
+        <section id="6262014">
+          <hgroup>
+            <h4>June 26, 2014</h4>
+              <blockquote>“Before software can be reusable it first has to be usable.” -- Ralph Johnson
+              </blockquote>
+              
+            <h1>Lame-O Robo 4000</h1>
+
+          </hgroup>
+          <p>
+            Introducing the world's most useless robot! In class, I was working on a JavaScript lab which required us to create a Robot name generator that returned two characters and three digits. I am not so good with being creative with names, titles, etc. (The name of this blog post should give you a hint.) So, we created a random name generator using some JavaScript Math methods and some String methods. 
+          </p>
+
+         
+          <div class ="robot-wrapper">
+      
+            <div class ="parts head">
+              <div class = "parts beep"></div>
+              <div class = "brain"></div>
+            </div>
+            
+            <div class ="parts entire-torso">
+              <div class = "left-arm">
+                <div class = "shoulders l-shoulder"></div>
+                <div class = "arms l-arm"></div>
+              </div>
+              
+              <div class ="midsection">
+                <div class = "parts torso">
+                  <div class ="parts display-name">HELLO! My name is </div>
+                  <div class ="button" id ="generate">
+                  <a id="name"> Generate!</a></div>
+                </div>
+                
+                <div class="parts ball"></div>
+                <div class ="hips">
+                  <div class ="parts console"></div>
+                  <div class ="button talk_button">
+                    <a id ="talk"> Talk to me!</a>
+                  </div>
+                  <div class ="button answer_button">
+                    <a id ="answer"> Answer!</a>
+                  </div>
+                </div>
+                <div class="parts foot"></div>
+              </div>
+              
+              <div class = "right-arm">
+                <div class = "shoulders r-shoulder"></div>
+                <div class = "arms r-arm"></div>
+              </div>
+            </div>
+          </div>
+    
+          <p>
+           The first requirement was for it to generate two letters. There was two ways I could've gone about it:
+          </p>
+          <ol>
+            <li>Put the entire alphabet in a long string like so, and randomly select one. Like so: <br> <br>
+              <div class = "code_block">
+              var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; <br>
+              </div>
+            </li><br>
+  
+            <li>
+              Use ASCII (American Standard Code for Information Interchange) numbers to generate the letters for us. If you don't know what ASCII text is, check out www.ascii-code.com. So, because we want to generate letters, well use the ASCII codes 65 - 90 (for all uppercases letters). <br> <br>
+              The ASCII code represents the character you want to type. In JavaScript, there is an awesome String method that uses ASCII code to render a character. It is the String.fromCharcode() method. This method takes any amount of arguments as long as you separate them using a comma. So, if I wanted to write my name using the ASCII code, this is what it would look like. <br> <br>
+
+              <div class = "code_block">
+              var myname = String.fromCharCode(83,97,110,100,121); <br>
+              return myname(); <br>
+
+              => "Sandy"<br>
+              </div>
+            </li>
+          </ol>
+          <p>
+          Try it out. Yes. It's "String.fromCharCode(77,97,103,105,99);"!
+          </p>
+          <p>
+            But we still haven't accomplish what we need to do. Both ways of getting the characters are great, but I didn't want static input of the characters. In example 1, since we have the entire alphabet in a string, we can randomly select two characters in a string and store it inside a variable using a for loop.
+
+            <div class = "code_block">
+              var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; <br>
+              var letters = ""; <br>
+              var i;<br> <br>
+              for (i = 0; i < 2; i++){ <br> 
+                &nbsp; letters += alpha.charAt(Math.floor(Math.random() * alpha.length)); <br>
+              }; <br>
+
+              </div> 
+            
+            Here, we created a name variable with an empty string so that we can hold the generated characters. Then, we declared a variable for the for loop. In the for loop, since we only want it to loop it twice, we will set the condition to loop through the code block twice. Inside the code block, we take the alphabet string and use the charAt() method to locate a letter at a given position in the string. If we wanted to know the letter in position 1, we would write:
+            <div class="code_block">
+              alpha.charAt(1); <br>
+              => "B"
+            </div> 
+             In our case, we want it to randomly generate the position for us. Any position is a number, so we used the Math.random() method to help generate the number for us. The Math.floor() method just rounds the generated number down so we won't not have to deal with floating point numbers. And if you're wondering how the Math.random() method knows what number to generate up to, it is defined when we stated * alpha.length. 
+          </p>
+          <p>
+            At this point, if we return our variable "name", it should give us our two letters! If it doesn't, shut the computer down, open your window and toss it.
+          </p>
+          <p>
+            If we the second example to generate our letters using the ASCII codes, here's how we can use it:
+            <div class="code_block">
+             
+              var letter1 = Math.floor((Math.random() * 25) + 65); <br>
+              var letter2 = Math.floor((Math.random() * 25) + 65); <br>
+              var letters = String.fromCharCode(letter1,letter2); <br>
+
+              <!-- &nbsp;var numbers = Math.floor((Math.random() * 899) + 100 ); <br> -->
+
+              return letters <!-- + "-" + numbers;<br> -->
+              
+            </div> 
+            Here, we set two variables to randomly generate a number between 65 - 90. (Remember, we want these numbers because it's the ASCII code for the alphabet). Then we pass those two variables into our String.fromCharCode() method. 
+          </p>
+          <p>
+            Yayyy! So either way we should have our two letters. Now that we know how to generate random numbers. The second part of the assignment should be a breeze. Now, we need a random string of three numbers.
+          
+          <div class="code_block">
+            var numbers = Math.floor((Math.random() * 899) + 100 ); <br>
+            return numbers;
+          </div>
+          Since we want a three numbers we an just try to generate a number from 100 - 999. This way we don't have to generate each number from 1 - 10 three times, but that is an option.
+          </p> 
+          <p> 
+            Finally, we have our characters generated and our numbers generated. Let's concatenate them together and we got ourselves a Robot Name thing thing.
+          </p>
+          <div class="code_block">
+            var name = letters + numbers;<br>
+            return name;
+            => FU300
+          </div>
+          <p>Taadaa! The most useless thing ever made. Maybe you can make something more useful!
+          </p>
+        </section>
+      
+        <section id="682014">
+          <hgroup>
+            <h4>June 8, 2014</h4>
+              <blockquote>“You've baked a really lovely cake, but then you've used dog shit for frosting.”   -― Steve Jobs
+              </blockquote>
+              
+            <h1>HTML</h1>
+          </hgroup>
+          <p>  
+            My first encounter with HTML was back when I was discovering how to pimp out my Myspace.com page. It was just a bunch of randomness but I did manage to get some cool background image sparkly .gif thing going on. Good enough. 
+          </p>
+          <figure><center><img src="http://www.fillster.com/images/glitters/248i.gif" border="0" alt="Cartoon Glitters for Myspace" width="25%"><br /></center> <figcaption> Yes... This used to be cool. I was cool.</figcaption></figure>
+          <p>
+            Years later, who would have thought I would run into HTML again. This time, a formal introduction... HTML 4. Fast forward. Now, HTML 4 is like an ex-boyfriend who you dumped and ran into... looking finer than when you left him. All matured and swagged out. His name is now "HTML 5." So, what has changed?
+          </p>
+  
+          <h3>Graceful Degradation and Progressive Enhancement. Fancy. </h3>
+          <p>
+            Graceful Degragation and Progressive Enhancement are two different perspectives on how the web should be built and what it focuses on. 
+          </p>
+
+          <p>Graceful Degradation focuses on building the website for the most advance and capable browsers. Older browsers were not priority, so it would be restricted to the previous version of the site. The site would probably still work and still deliver information to the client but it might miss out on the cool new features that might have been added on to the new site.</p>
+
+          <figure><img class= "standard_img" src="images/browsers.jpg" alt="Browsers" /> <figcaption>Browsers</figcaption> </figure>
+
+          <p>On the other hand, Progressive Enhancement focuses on the content of the site. Its main focus is on what should be delivered to the client regardless of what browser a client is using. No judgement zone. In order to focus on content, there is a layering system used to build a site using this perspective. Layer 1 would be the content and structuring of the content in which the site should deliver to the client. It should essentially offer basic experience to the user. HTML. Layer 2 would be the presentation of the site. CSS. The Last Layer is the interactive fancy smancy stuff, letting the user manipulate and interact with the content and it's presentation layer. JavaScript. It focuses on giving a universal experience as much as possible across all browsers. </p>
+
+          <h3>Semantics</h3>
+          <p>When structuring content in HTML, we want to make sure that everything that is on the page is meaningful. In HTML 4, all our content are separated by div tags. DIVS DON'T MEAN JACK. It's just a nice way to separate the building blocks of the site. This is where the improvements of HTML 5 kicks in. Let's take a look at some of the differences in between the two versions of the markup.</p>
+
+          <h4>!DOCTYPE</h4>
+          <p>HTML 4 </p>
+          <div class = "code_block">
+              &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+          </div>
+          <p>HTML 5 </p>
+          <div class = "code_block">
+              &lt;!DOCTYPE html&gt;
+          </div>
+
+          <h4>Character Encoding</h4>
+          <p>HTML 4 </p>
+          <div class = "code_block">
+              &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+          </div>
+          <p>HTML 5 </p>
+          <div class = "code_block">
+              &lt;meta charset="utf-8" /&gt;
+          </div>
+
+           <h4>Elements</h4>
+          <p>HTML 4 </p>
+          <div class = "code_block">
+              &lt;div class = "header"&gt; &lt;/div&gt;
+          </div>
+          <p>HTML 5 </p>
+          <div class = "code_block">
+              &lt;header&gt; &lt;/header&gt; <br />
+              &lt;section&gt; &lt;/section&gt; <br />
+              &lt;article&gt; &lt;/article&gt; <br />
+              &lt;aside&gt; &lt;/aside&gt; <br />
+              &lt;footer&gt; &lt;/footer&gt; <br />
+              &lt;figure&gt; &lt;/figure&gt; <br />
+              &lt;figurecaption&gt; &lt;/figurecaption&gt; <br />
+              &lt;hgroup&gt; &lt;/header&gt; <br />
+              &lt;menu &gt; &lt;/menu&gt; <br />
+              &lt;nav&gt; &lt;/nav&gt; <br />
+              &lt;video&gt; &lt;/video&gt; <br />
+              &lt;audio&gt; &lt;/audio&gt; <br />
+              &lt;canvas&gt; &lt;/canvas&gt; <br />
+          </div>
+
+          <p> In HTML 4, divs are used to section off every piece of a website. It doesn't really have any specific meaning in regards of what the content within really does. We would typically identify what the div was used for using the class attribute. For example, to tell a div that they were going to hold the contents of the navigation, it would be written like so: &lt;div class="nav"&gt; &lt;/div&gt; But with HTML 5, it is packaged with new elements that all called what they are for. So for the nav example, wouldn't it be nice to have a &lt;nav&gt; &lt;/nav&gt;? Done. Using HTML 5 elements will help give your html page more semantic meaning. 
+          </p>
+
+          <p>HTML 5 has also incorporated &lt;video&gt; &lt;/video&gt;, &lt;audio&gt; &lt;/audioo&gt;,and the &lt;canvas&gt; &lt;/canvas&gt; so that we no longer have to add in plugin media players to play a video or a mp3 file. It has also pushed Flash off the web wth the canvas, which enables animation &amp; interactive capabilities using JavaScript. Instead of doing all the work in Flash with ActionScript then exporting it out of Flash... yada yada... all for it to show up on the web. Browsers are adapting to what HTML 5 has to offer. 
+          </p>
+          
+          <p>
+            I really enjoy playing around with the Front-end... pause... you know what I meant. Being able to code and see the progress every step of the way is what helps me get excited about the end result. The capabilities of HTML 5 has definitely changed the game with all it's new features and semantics, making it easier to understand the flow and usage of each element versus dumping it on your HTML page... just because. Go pimp out your Myspace page now. Did you just ask me what Myspace is?
+          </p>
+          
+        
+        </section>
+
+
         <section id="5212014">
           <hgroup>
             <h4>May 21, 2014</h4>
@@ -46,7 +358,7 @@
             <!-- <h2>Arrays</h2> -->
 
 
-            <h2>Numbers</h2>
+            <h3>Numbers</h3>
 
             <h5>To return the smallest integer greater than the number.</h5>
             Ruby: .ceil
@@ -132,7 +444,7 @@
             </div>
 
 
-            <h2>Strings</h2>
+            <h3>Strings</h3>
 
             <h5>To convert the entire string to its lower case form.</h5>
             Ruby: .downcase 
@@ -307,22 +619,22 @@
             We have encounter many flowcharts in our life. Remember, back when you were in junior high school when you wondered if that cute new kid in class liked you? Well, let's flip to page 97 in the Seventeen magazine and take the quiz! <br />
             &nbsp;&nbsp;&nbsp;&nbsp;Did you dress like a slut? YES OR NO... NO... <br />Well, it probably told you they didn't like you and you should change yourself. Let's not make flowcharts that make people want to kill themselves. Let's use it for programming!
             <figure> 
-              <img src = "images/funny_fc.jpg" alt="Sad Flow Chart" /> 
+              <img class= "standard_img" src = "images/funny_fc.jpg" alt="Sad Flow Chart" /> 
               <figcaption>This breaks the "Don't be an ASSHOLE!" Flatiron rule.</figcaption>
             </figure>
             A flowchart is a graphic representation of a process organized by geometric shapes. In the instance of programming, you can think of it like the GUI of pseudo code. It shows the steps in boxes or levels that are connected by arrows. Each box is a thought or an action. A flowchart serves as a blueprint for the information we are presenting.
           </p>
           <p>
-            <h2>Components of a basic flowchart</h2>
+            <h3>Components of a basic flowchart</h3>
             There are a couple main geometric shapes that make up the flowchart:
             <img class="ex_img" src = "images/ex1.png" alt = "Flowchart components" />
 
           </p>
           <p>
-            <h2>Example Flowcharts</h2>
+            <h3>Example Flowcharts</h3>
             <h4>If/Else Statement<h4>
             <figure>
-              <img src="images/if_else.png" alt = "An If/Else Statement Flowchart" />
+              <img class= "standard_img" src="images/if_else.png" alt = "An If/Else Statement Flowchart" />
             </figure>
             Code:
             <div class = "code_block">
@@ -335,7 +647,7 @@
             </div>
             <h4>While Loop</h4>
             <figure>
-              <img src="images/while.png" alt = "A While Loop Flowchart" />
+              <img class= "standard_img" src="images/while.png" alt = "A While Loop Flowchart" />
             </figure>
             Code:
             <div class = "code_block">
@@ -347,7 +659,7 @@
             </div>
           </p>
           <p>
-            <h2>Let's go with the flow and solve something</h2>
+            <h3>Let's go with the flow and solve something</h3>
             Pseudo code:
             <ol>
               <li>Initialize passes to zero</li>
@@ -373,7 +685,7 @@
               <li>If eight or more students passed</li>
               <li>Print "raise tuition"</li>
             </ol>
-            <figure> <img src="images/pseudo.png" alt = "Pseudo code made into a flowchart" />
+            <figure> <img class= "standard_img" src="images/pseudo.png" alt = "Pseudo code made into a flowchart" />
               <figcaption> We did it! </figcaption>
             </figure>
             Code
@@ -406,7 +718,7 @@
             </div>
           </p>
           <p>
-            <h2>Benefits of using a flowchart</h2>
+            <h3>Benefits of using a flowchart</h3>
             <ol>
               <li>Focus on the logic rather than syntax</li>
               <li>Helps analyzes the problem</li>
@@ -484,7 +796,8 @@
               <td>  </td>
             </tr>
           </table>
-          <h5>July</h5>
+        -->
+             <h5>July</h5>
           <table>
             <tr>
               <td> S </td>
@@ -498,49 +811,53 @@
             <tr>
               <td>  </td>
               <td>  </td>
+              <td>  </td>
               <td> 1</td>
               <td> 2 </td>
               <td> 3 </td>
               <td> 4 </td>
-              <td> 5 </td>
+             
             </tr>
             <tr>
+              <td> 5 </td>
               <td> 6 </td>
               <td> 7 </td>
               <td> 8 </td>
               <td> 9 </td>
               <td> 10 </td>
               <td> 11 </td>
-              <td> 12 </td>
+              
             </tr>
             <tr>
+              <td> 12 </td>
               <td> 13 </td>
               <td> 14 </td>
               <td> 15 </td>
               <td> 16 </td>
               <td> 17 </td>
               <td> 18 </td>
-              <td> 19 </td>
+              
             </tr>
             <tr>
+              <td> 19 </td>
               <td> 20 </td>
               <td> 21 </td>
               <td> 22 </td>
               <td> 23 </td>
               <td> 24 </td>
               <td> 25 </td>
-              <td> 26 </td>
+              
             </tr>
             <tr>
+              <td> 26 </td>
               <td> 27 </td>
               <td> 28 </td>
               <td> 29 </td>
               <td> 30 </td>
               <td> 31 </td>
               <td>  </td>
-              <td>  </td>
             </tr>
-          </table> -->
+          </table>
           <h5>June</h5>
           <table>
             <tr>
@@ -553,46 +870,49 @@
               <td> S </td>
             </tr>
             <tr>
-              <td> 1 </td>
-              <td> 2 </td>
-              <td> 3 </td>
-              <td> 4 </td>
-              <td> 5 </td>
-              <td> 6 </td>
-              <td> 7 </td>
+              <td class="passed"> 1 </td>
+              <td class="passed"> 2 </td>
+              <td class="passed"> 3 </td>
+              <td class="passed"> 4 </td>
+              <td class="passed"> 5 </td>
+              <td class="passed"> 6 </td>
+              <td class="passed"> 7 </td>
             </tr>
             <tr>
-              <td> 8 </td>
-              <td> 9 </td>
-              <td> 10 </td>
-              <td> 11 </td>
-              <td> 12 </td>
-              <td> 13 </td>
-              <td> 14 </td>
+              <td class="passed"> 8 </td>
+              <td class="passed"> 9  </td>
+              <td class="passed"> 10 </td>
+              <td class="passed"> 11 </td>
+              <td class="passed"> 11 </td>
+              <td class="passed"> 12 </td>
+              <td class="passed"> 13 </td>
+              
             </tr>
             <tr>
-              <td> 15 </td>
-              <td> 16 </td>
-              <td> 17 </td>
-              <td> 18 </td>
-              <td> 19 </td>
-              <td> 20 </td>
-              <td> 21 </td>
+              <td class="passed"> 14 </td>
+              <td class="passed"> 15 </td>
+              <td class="passed"> 16 </td>
+              <td class="passed"> 17 </td>
+              <td class="passed"> 18 </td>
+              <td class="passed"> 19 </td>
+              <td class="passed"> 20 </td>
+              
             </tr>
             <tr>
-              <td> 22 </td>
-              <td> 23 </td>
-              <td> 24 </td>
-              <td> 25 </td>
-              <td> 26 </td>
-              <td> 27 </td>
-              <td> 28 </td>
+              <td class="passed"> 21 </td>
+              <td class="passed"> 22 </td>
+              <td class="passed"> 23 </td>
+              <td class="passed"> 24 </td>
+              <td class="passed"> 25 </td>
+              <td class="passed"> 26 </td>
+              <td class="passed"> 27 </td>
+              
             </tr>
             <tr>
-              <td> 29 </td>
+              <td class="passed"> 28 </td>
+              <td > 29 </td>
               <td> 30 </td>
               <td> </td>
-              <td>  </td>
               <td>  </td>
               <td>  </td>
               <td>  </td>
@@ -649,11 +969,11 @@
             <tr>
               <td class="passed"> 25 </td>
               <td class="passed"> 26 </td>
-              <td> 27 </td>
-              <td> 28 </td>
-              <td> 29 </td>
-              <td> 30 </td>
-              <td> 31</td>
+              <td class="passed"> 27 </td>
+              <td class="passed"> 28 </td>
+              <td class="passed"> 29 </td>
+              <td class="passed"> 30 </td>
+              <td class="passed"> 31</td>
             </tr>
           </table>
           <h5>April</h5>
@@ -673,15 +993,15 @@
               <td class="passed"> 1 </td>
               <td class="passed"> 2 </td>
               <td class="passed"> 3 </td>
-              <td class="passed"> <a href="#442014"> 4 </a> </td>
+              <td class="passed"> 4 </a> </td>
               <td class="passed"> 5 </td>
             </tr>
             <tr>
               <td class="passed"> 6 </td>
               <td class="passed"> 7 </td>
-              <td class="passed"> <a href="#482014"> 8 </a> </td>
-              <td class="passed"> <a href="#492014"> 9 </a> </td>
-              <td class="passed"> <a href="#4102014"> 10 </td>
+              <td class="passed"> 8 </a> </td>
+              <td class="passed"> 9 </a> </td>
+              <td class="passed"> 10 </td>
               <td class="passed"> 11 </td>
               <td class="passed"> 12 </td>
             </tr>
@@ -783,7 +1103,18 @@
         </section>
 
         <section>
-        <h2>Other Resources</h2>
+          <h2>Contact me</h2>
+          <form action="" method="post">
+            <label for ="f_name">First Name</label>
+            <input name = "first" id="f_name" />
+            <label for ="l_name">Last Name</label>
+            <input name = "last" id="l_name" />
+            <label for ="email">E-Mail</label>
+            <input name = "email_addy" id="email" />
+            <label for ="note">Note</label>
+            <textarea id="note"></textarea>
+            <input type="submit" value="Drop Note" />
+          </form>
         </section>
         
       </aside>
@@ -794,4 +1125,6 @@
     </footer>
 
   </body>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/name_generator.js"></script>
 </html>

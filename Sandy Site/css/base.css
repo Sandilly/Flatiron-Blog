@@ -54,6 +54,7 @@ a{
   padding: 15px;
   font-size: 13px;
   font-family: "Courier New", sans-serif;
+  border-radius:15px;
 }
 .code_block h4{
   background-color: #888;

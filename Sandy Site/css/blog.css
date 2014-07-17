@@ -71,6 +71,17 @@ td{
 .heart{
   margin-right: 20px;
 }
+label{
+  display: block;
+  margin-bottom: 5px;
+}
+input, textarea{
+  width:100%;
+  margin-bottom: 10px;
+}
+textarea{
+  min-height: 200px; 
+}
 
 
 
@@ -83,7 +94,7 @@ td{
 /*----------------------------BODY STYLES---------------------------*/
 .postings{
   width: 70%;
-  font-size:18px;
+  font-size:15px;
   line-height: 1.5;
   float:left;
 }
@@ -113,6 +124,14 @@ td{
   font-family: "Courier New", sans-serif;
 }
 
+.sm_icons{
+  width:25px;
+  vertical-align: text-bottom;
+}
+
+.standard_img{
+  width:500px;
+}
 
 
 

@@ -1,0 +1,162 @@
+.robot-wrapper{
+  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: 12px;
+}
+.parts{
+  background-color: transparent;
+  margin: 0 auto;
+}
+.robot-wrapper{
+  width:300px;
+  height:650px;
+  margin: 0 auto;
+  clear: both;
+  line-height: 1;
+}
+.beep{
+      width: 5px;
+      height:0;
+      border:5px solid transparent;
+      border-top: 10px solid #000;
+      border-bottom: 40px solid #888;
+}
+.head{
+  width: 150px;
+}
+.brain{
+  background:radial-gradient(circle, #fff 15%, transparent 40%), #000;
+  background:-moz-radial-gradient(circle, #fff 15%, transparent 40%), #000;
+  background:-webkit-radial-gradient(circle, #fff 15%, transparent 40%), #000;
+  background-size:75px 150px;
+  height:150px;
+  width:150px;
+  border-radius:60px 60px 40px 40px;
+  border-bottom:5px solid #f00;
+}
+.entire-torso{
+  height:150px;
+  width:205px;
+}
+.left-arm{
+  width:40px;
+  height:200px;
+  float:left;
+}
+.l-shoulder{
+  border-radius: 20px 5px 5px 20px;
+}
+.l-arm{
+  margin-left: 10px;
+  border-top-left-radius: 15px;
+}
+.shoulders{
+  width:40px;
+  height:40px;
+  background: #888;
+  float:left;
+}
+.arms{
+  width:25px;
+  height:200px;
+  background-color:#000;
+  border-radius:10px;
+  border-bottom: solid #f00 5px;
+}
+.l-hand{
+  width: 35px;
+  height:45px;
+  background-color: #f00;
+  border-radius: 5px 5px 10px 10px;
+}
+.hands{
+   width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 red;
+}
+.right-arm{
+  width:40px;
+  height:200px;
+  float:right;
+}
+.r-shoulder{
+  border-radius:5px 20px 20px 5px;
+}
+.r-arm{
+  margin-left: 5px;
+  border-top-right-radius: 15px;
+}
+.midsection{
+  float:left;
+}
+.torso{
+    height:110px;
+    width:125px;
+    border-radius:5px 5px 25px 25px;
+    background-color: #000;
+    padding-top: 15px;
+    border-bottom:5px solid #f00;
+  }
+
+.display-name{
+  height:50px;
+  width:75px;
+  color:#fff;
+  text-align: center;
+  background-color: #c1c1c1;
+  
+  padding: 3px;
+  border-radius: 5px;
+}
+.button{
+  background-color:#fff;
+  text-align: center;
+  width: 75px;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+.ball{
+  width:30px;
+  height:20px;
+  border-radius: 5px;
+  background-color: #000;
+  
+}
+.hips{
+  width:85px;
+  height:175px;
+  border-radius: 25px 25px 50px 50px;
+  background-color: #000;
+  border-top:5px solid #f00;
+  border-bottom:5px solid #f00;
+  padding:20px;
+}
+.console{
+  width:80px;
+  height:100px;
+  padding: 3px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #c1c1c1;
+  color:#fff;
+}
+.foot {
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position:relative;
+  left:0px;
+  top:-10px;
+  z-index:-1;
+}
+a{
+  text-decoration: none;
+  font-family: impact;
+  color:#000;
+}
+a:hover{
+  color:#f00;
+}
+
