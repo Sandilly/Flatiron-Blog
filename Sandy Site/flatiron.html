@@ -34,6 +34,257 @@
 
     <article>
       <div class="postings">
+        <section id="882014">
+          <hgroup>
+            <h4>August 8, 2014</h4>
+              <blockquote> "You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity." -- John Romero
+              </blockquote>
+            <h1>Refactoring My Javascript Code</h1>
+          </hgroup>
+          <p>
+            
+          </p>
+        </section>
+
+        <section id="872014">
+          <hgroup>
+            <h4>August 7, 2014</h4>
+              <blockquote> "Good design adds value faster than it adds cost." -- Thomas C. Gale
+              </blockquote>
+            <h1>JavaScript's Date Object & Moment.js</h1>
+          </hgroup>
+          <p>
+            Date is a built-in object in JavaScript which is used to work with both date and time. Any instance created is only a representation of a single moment in time. To create an instance of the Date object you have to use Date as a constructor. 
+          </p>
+          <div class = "code_block">
+            var dateVar = new Date(); <br/>
+            return dateVar; </br>
+            => Mon Aug 04 2014 14:56:20 GMT-0400 (EDT)
+          </div>
+          <p>
+            The Date object without any parameters will return the current date and time. When you save it in a variable, it will save only the date and time the variable was set. If you do not put the "new" operator in front, it will return a String object.
+          </p>
+          <div class = "code_block">
+            var dateVar = Date(); <br/>
+            return dateVar; </br>
+            => "Mon Aug 04 2014 14:56:20 GMT-0400 (EDT)"
+          </div>
+          <p>
+            The Date constructor can take multiple types of arguments:
+          </p>
+          <ul>
+            <li>
+              <h5>1) Value </h5>
+              <p>When a integer is passed in as a parameter, it refers to the number of milliseconds since January 1, 1970 00:00:00 UTC. This date is the "zero-point of POSIX time".</p>
+              <div class = "code_block">
+                var dateMilli = new Date(0); <br/>
+                return dateMilli; </br>
+                => Thu Jan 01 1970 00:00:00 GMT-0500 (EST)
+              </div>
+            </li>
+
+            <li>
+              <h5>2) A Date String </h5>
+              <p>A date string can also be passed in as an argument. It will set the new Date object to the string that is passed in and return a Date object. Date strings that are passed in should be recognized by the ISO format. When "1987-04-05" is passed, it gets parsed. </p>
+              <div class = "code_block">
+                var dateStr = new Date("1987-04-05"); <br/>
+                return dateStr; </br>
+                => Sun Apr 05 1987 00:00:00 GMT-0500 (EST)
+              </div>
+              <p>If a string that has been passed in consisted of any non-integer characters that do not represent a valid date, it would return "Invalid Date"</p>
+              <div class = "code_block">
+                var dateStr = new Date("1987-04-05 is my Birthday! Yay!"); <br/>
+                return dateStr; </br>
+                => Invalid Date
+              </div>
+              <p>But if 3 or more letters from the word of the actual month is passed in using a valid date format, it will return a date object.</p>
+              <div class = "code_block">
+                var dateStr = new Date("April/5/1987"); <br/>
+                return dateStr; </br>
+                => Sun Apr 05 1987 00:00:00 GMT-0500 (EST)
+              </div>
+            </li>
+
+            <li>
+              <h5>3) Multiple Values </h5>
+              <p>Another way we can instantiate the Date object is passing in 2 or more integer values as arguments in this order: Year, Month, Day, Hours, Minutes, Seconds, Milliseconds. In this case, because Months are 0 based, the number 4 that is passed in will return the month of May instead. </p>
+              <div class = "code_block">
+                var date7Vals = new Date(1987, 4, 5, 10, 30, 30, 500); <br/>
+                return date7Vals; </br>
+                => Tue May 05 1987 10:30:30 GMT-0400 (EDT)
+              </div>
+              <p>In this case, we are not allowed to pass in the month in a string unless it is a number.</p>
+            </li>
+          </ul>
+          <h3>Date Methods</h3>
+          <p>
+            The Date object comes with methods to extract and set certain information from the Date object.
+          </p>
+          <table>
+            <tr>
+              <th>Getter Methods</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>getFullYear();</td>
+              <td>Used to get a four digit year of a given date.</td>
+            </tr>
+            <tr>
+              <td>getMonth();</td>
+              <td>Used to get the month of a given date. </td>
+            </tr>
+            <tr>
+              <td>getDate();</td>
+              <td>Used to get the day of the month of a given date.</td>
+            </tr>
+            <tr>
+              <td>getDay();</td>
+              <td>Used to get the day of the week of a given date. (0-6)</td>
+            </tr>
+            <tr>
+              <td>getHour();</td>
+              <td>Used to get the hour of a given date.</td>
+            </tr>
+            <tr>
+              <td>getMinutes();</td>
+              <td>Used to get the minutes from the current time.</td>
+            </tr>
+            <tr>
+              <td>getSeconds();</td>
+              <td>Used to get the seconds from the current time.</td>
+            </tr>
+            <tr>
+              <th>Setter Methods</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>setFullYear();</td>
+              <td>Used to set a four digit year of a given date.</td>
+            </tr>
+            <tr>
+              <td>setMonth();</td>
+              <td>Used to set the month of a given date. </td>
+            </tr>
+            <tr>
+              <td>setDate();</td>
+              <td>Used to set the day of the month of a given date.</td>
+            </tr>
+            <tr>
+              <td>setDay();</td>
+              <td>Used to set the day of the week of a given date. (0-6)</td>
+            </tr>
+            <tr>
+              <td>setHour();</td>
+              <td>Used to set the hour of a given date.</td>
+            </tr>
+            <tr>
+              <td>setMinutes();</td>
+              <td>Used to set the minutes from the current time.</td>
+            </tr>
+            <tr>
+              <td>setSeconds();</td>
+              <td>Used to set the seconds from the current time.</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>All according to local time.</td>
+            </tr>
+          </table>
+
+          <h3>Manipulating Dates with Moment.js</h3>
+          <p>
+            Moment.js is a JavaScript library used to parse, manipulate, validate and to format date and time. In order to use this library in the browser, it needs to be downloaded and be called inside the script tags.
+          </p>
+          <div class="code_block">
+            &lt;script src="moment.js"&gt; &lt;/script&gt;
+          </div>
+          <p>
+            To get the current date and time using the Moment.js library:
+          </p>
+          <div class="code_block">
+            moment(); <br/>
+            => Tue Aug 05 2014 13:37:52 GMT-0400 (EDT)
+          </div>
+          <h3>Adding &amp; Subtracting Time Length </h3>
+          <p>
+            When dealing with dates and time, it is pretty difficult to do calculations with adding and subtracting days, weeks and months to. When using the Date object in JavaScript, in order to add days to a given time, one must calculate how many milliseconds are in a day and then figure out the difference between the two dates... yada..yada. I dropped out of accounting for this!? Calm down, I still love programming, but if there are certain shortcuts, I would like to take advantage! Let's check out what Moment.js has to offer!
+          </p>
+          <p>
+            To add/subtract a period length, Moment.js offers these nice little methods that takes two arguments; an integer value and a time period ('days', 'weeks', 'months', 'years').
+            <div class="code_block">
+              moment(); <br />
+              => Tue Aug 05 2014 18:10:09 GMT-0400 (EDT) <br />
+              moment().add(7, 'days'); <br />
+              => Tue Aug 12 2014 18:10:32 GMT-0400 (EDT) <br />
+              moment().subtract(1, 'weeks'); <br />
+              => Tue Jul 29 2014 18:10:44 GMT-0400 (EDT) <br />
+            </div>
+          </p>
+          <p>JavaScript has default methods for their Date object but with the help of this library, you can have more flexibility to manipulate and utilize the Date object without beating around the bush. There is a lot more to understand about the Date object and the Moment.js library. You can download or just go on their site and read up more on<a href="http://momentjs.com/docs/"> Moment.JS </a>.</p>
+          
+        </section>
+    
+        <section id="7242014">
+          <hgroup>
+            <h4>July 24, 2014</h4>
+              <blockquote>“The trouble with programmers is that you can never tell what a programmer is doing until it’s too late." -- Seymour Cray
+              </blockquote>
+            <h1>Things I Didn't Know About Terminal</h1>
+          </hgroup>
+          <p>
+            There are many commands in Terminal that I should have picked up already and I probably should be doing that right now... I'll get to that after I tell you about some useless but quite entertaining things that Terminal has to offer!
+          </p>
+          <h3>You can Play Games Emacs </h3>
+          <p> GNU Emacs is a flexible text editor used on Linux (and Unix). It is mainly built in a programming language called Lisp. Since is it has a whole programming language built it, it can be customized and extended to change it's behavior. Mac OS X comes with Emacs which can be accessed via Terminal.
+          </p>
+          <p>
+          An awesome feature I found out about this text editor is that it plays games! In your terminal type in:
+          </p>
+          <div class = "code_block">
+            ls /usr/share/emacs/VERSION/lisp/play 
+          </div>
+
+          <figure>
+            <img class= "standard_img" src="images/emac_1.png" alt = "Emacs Screen" /> <br>
+            <figurecaption>This lists out all the games you can play.</figurecaption>
+          </figure> 
+
+          <p>Where it says 'VERSION', replace it with your Emacs version number. If you do not know what version you have, type in the following in another terminal:</p>
+          <div class = "code_block">
+            emacs 
+          </div>
+          <figure>
+            <img class= "standard_img" src="images/emac_intro.png" alt = "Emacs Screen" /> <br>
+            <figurecaption>This opens up Emacs and tells you all its info. I have version 22.1</figurecaption>
+          </figure>
+
+          <p>If you press 'Enter' after Emacs had launched, it opens up the text editor. Hit the 'ESC' key to clear the little console bar on the bottom. Then press 'x'. 'M-x' should appear. Refer to your games list and type the name of the game without the file extension after the 'M-x' and press 'Enter'. </p>
+
+          <figure>
+            <img class= "standard_img" src="images/emac_editor.png" alt = "Emacs Screen" /> <br>
+            <figurecaption>Type in the game you want to play  and hit 'Enter'.</figurecaption>
+          </figure>
+
+          <p> Viola! Me playing 'Snake.'</p>
+
+          <figure>
+            <img class= "standard_img" src="images/emac_game.png" alt = "Emacs Screen" /> <br>
+            <figurecaption>Wheee! Old cellphone games...</figurecaption>
+          </figure>
+          
+          <h3>Watch an Animated ASCII Art Episode of Star Wars</h3>
+          <p>For all you Star Wars fanatics. I can't even explain this one. Just type the following into your terminal and enjoy.</p>
+          <div class = "code_block">
+            telnet towel.blinkenlights.nl
+          </div>
+
+          <figure>
+            <img class= "standard_img" src="images/star_wars.png" alt = "ASCII Starwars" /> <br>
+            <figurecaption>Star Wars Episode IV: A New Hope </figurecaption>
+          </figure>
+
+          <p>Games and shows inside Terminal? Throw out your PS4 and Xbox... </p>
+        </section>
         <section id="7172014">
           <hgroup>
             <h4>July 17, 2014</h4>
@@ -870,7 +1121,7 @@
       <aside class="sidebar">
         <section class="count_down">
           <h2>The Countdown</h2>
-          <!--<h5>August</h5>
+          <h5>August</h5>
           <table>
             <tr>
               <td> S </td>
@@ -887,12 +1138,12 @@
               <td>  </td>
               <td>  </td>
               <td>  </td>
-              <td> 1 </td>
-              <td> 2 </td>
+              <td class="passed"> 1 </td>
+              <td class="passed"> 2 </td>
             </tr>
             <tr>
-              <td> 3 </td>
-              <td> 4 </td>
+              <td class="passed"> 3 </td>
+              <td class="passed"> 4 </td>
               <td> 5 </td>
               <td> 6 </td>
               <td> 7 </td>
@@ -936,7 +1187,7 @@
               <td>  </td>
             </tr>
           </table>
-        -->
+     
              <h5>July</h5>
           <table>
             <tr>
@@ -974,27 +1225,27 @@
               <td class="passed"> 14 </td>
               <td class="passed"> 15 </td>
               <td class="passed"> 16 </td>
-              <td> 17 </td>
-              <td> 18 </td>
+              <td class="passed"> 17 </td>
+              <td class="passed"> 18 </td>
               
             </tr>
             <tr>
-              <td> 19 </td>
-              <td> 20 </td>
-              <td> 21 </td>
-              <td> 22 </td>
-              <td> 23 </td>
-              <td> 24 </td>
-              <td> 25 </td>
+              <td class="passed"> 19 </td>
+              <td class="passed"> 20 </td>
+              <td class="passed"> 21 </td>
+              <td class="passed"> 22 </td>
+              <td class="passed"> 23 </td>
+              <td class="passed"> 24 </td>
+              <td class="passed"> 25 </td>
               
             </tr>
             <tr>
-              <td> 26 </td>
-              <td> 27 </td>
-              <td> 28 </td>
-              <td> 29 </td>
-              <td> 30 </td>
-              <td> 31 </td>
+              <td class="passed"> 26 </td>
+              <td class="passed"> 27 </td>
+              <td class="passed"> 28 </td>
+              <td class="passed"> 29 </td>
+              <td class="passed"> 30 </td>
+              <td class="passed"> 31 </td>
               <td>  </td>
             </tr>
           </table>
